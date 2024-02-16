@@ -2,7 +2,7 @@ package edu.iastate.cs228.hw1;
 
 /**
  * 
- * @author <Connor Grim>
+ * @author Connor Grim
  *	Also provide appropriate comments for this class
  *
  */
@@ -48,6 +48,32 @@ public abstract class TownCell {
 		nCensus[STREAMER] = 0; 
 
 		//TODO: Write your code here.
+		//Gets bounds of a 3x3 neighborhood
+		int upper = Math.max(0, row - 1);
+		int lower = Math.min(plain.grid.length - 1, row + 1);
+		int left = Math.max(0, col - 1);
+		int right = Math.min(plain.grid.width - 1, col + 1);
+
+		//Checks each cell and increments the State nCensus by 1
+		for (int i = upper; i <= lower; i++){
+			for (int j = left; j <= right; j++){
+				if(plain.grid[i][j].who() == State.RESELLER){
+					nCensus[RESELLER]++;
+				}
+				else if (plain.grid[i][j].who() == State.EMPTY){
+					nCensus[EMPTY]++;
+				}
+				else if (plain.grid[i][j] == State.CASUAL){
+					nCensus[CASUAL]++;
+				}
+				else if (plain.grid[i][j] == State.OUTAGE){
+					nCensus[OUTAGE]++;
+				}
+				else if (plain.grid[i][j] == State.STREAMER){
+					nCensus[STREAMER];
+				}
+			}
+		}
 
 	}
 
