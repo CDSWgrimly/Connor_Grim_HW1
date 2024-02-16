@@ -12,7 +12,7 @@ public class Outage extends TownCell{
 
     @Override
     public TownCell next(Town tNext){
-        int tCensus[] = new int[NUM_CELL_TYPE];
+        int[] tCensus = new int[NUM_CELL_TYPE];
         census(tCensus);
         tCensus[OUTAGE]--;
 

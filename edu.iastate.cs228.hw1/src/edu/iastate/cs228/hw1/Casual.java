@@ -17,7 +17,7 @@ public class Casual extends TownCell{
     //Sets cell in next Town iteration based on rules in description
     @Override
     public TownCell next(Town tNext){
-        int tCensus[] = new int[NUM_CELL_TYPE];
+        int[] tCensus = new int[NUM_CELL_TYPE];
         census(tCensus);
         tCensus[CASUAL]--;
 
