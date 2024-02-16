@@ -27,7 +27,7 @@ public class Town {
 	
 	/**
 	 * Constructor to be used when user wants to populate grid based on a file.
-	 * Please see that it simple throws FileNotFoundException exception instead of catching it.
+	 * Please see that it simply throws FileNotFoundException exception instead of catching it.
 	 * Ensure that you close any resources (like file or scanner) which is opened in this function.
 	 * @param inputFileName
 	 * @throws FileNotFoundException
@@ -42,7 +42,7 @@ public class Town {
 	 */
 	public int getWidth() {
 		//TODO: Write/update your code here.
-		return 0;
+		return width;
 	}
 	
 	/**
@@ -51,7 +51,7 @@ public class Town {
 	 */
 	public int getLength() {
 		//TODO: Write/update your code here.
-		return 0;
+		return length;
 	}
 
 	/**
