@@ -11,8 +11,8 @@ public class Reseller extends TownCell{
     }
 
     @Override
-    public Town nextTown (Town tNext){
-        int tCensus = new int[NUM_CELL_TYPE];
+    public TownCell next(Town tNext){
+        int tCensus[] = new int[NUM_CELL_TYPE];
         census(tCensus);
         tCensus[RESELLER]--;
 

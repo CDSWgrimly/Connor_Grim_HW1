@@ -1,7 +1,7 @@
 package edu.iastate.cs228.hw1;
 
 /**
- * @author <Connor Grim>
+ * @author Connor Grim
  */
 public class Casual extends TownCell{
     public Casual(Town p, int r, int c){
@@ -16,7 +16,7 @@ public class Casual extends TownCell{
 
     //Sets cell in next Town iteration based on rules in description
     @Override
-    public Town next(Town tNext){
+    public TownCell next(Town tNext){
         int tCensus[] = new int[NUM_CELL_TYPE];
         census(tCensus);
         tCensus[CASUAL]--;
@@ -26,8 +26,8 @@ public class Casual extends TownCell{
             return new Reseller(tNext, row, col);
         }
         //CASUAL RULE 1
-        else if (tCensus[RESELLER > 0){
-            return new Outseller(tNext, row, col);
+        else if (tCensus[RESELLER] > 0){
+            return new Reseller(tNext, row, col);
         }
         //CASUAL RULE 2
         else if (tCensus[STREAMER] > 0){

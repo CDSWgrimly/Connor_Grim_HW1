@@ -13,7 +13,7 @@ public class Empty extends TownCell{
 
     //Sets cell to Casual in next iteration
     @Override
-    public Town nextTown (Town tNext){
+    public TownCell next(Town tNext){
         int tCensus[] = new int[NUM_CELL_TYPE];
         census(tCensus);
         tCensus[EMPTY]--;
