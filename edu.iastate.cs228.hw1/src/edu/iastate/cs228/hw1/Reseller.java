@@ -16,14 +16,17 @@ public class Reseller extends TownCell{
         census(tCensus);
         tCensus[RESELLER]--;
 
+        //RESELLER RULES 1 & 2
         if (tCensus[CASUAL] <= 3 || tCensus[EMPTY] >= 3){
             return new Empty (tNext, row, col);
         }
+        //ADDITIONAL RULE 2
         else if (tCensus[CASUAL] >= 5){
             return new Streamer (tNext, row, col);
         }
+        //REMAINING RULE
         else{
-            return new Casual (tNext, row, col);
+            return new Reseller (tNext, row, col);
         }
     }
 }

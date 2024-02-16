@@ -37,5 +37,8 @@ public class Casual extends TownCell{
         else if (tCensus[CASUAL] >= 5){
             return new Streamer(tNext, row, col);
         }
+        else{
+            return new Casual(tNext, row, col);
+        }
     }
 }
