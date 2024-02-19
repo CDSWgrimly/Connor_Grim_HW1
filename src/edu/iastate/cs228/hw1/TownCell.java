@@ -37,39 +37,39 @@ public abstract class TownCell {
 	 * neighbors excluding the center cell).
 	 * Use who() method to get who is present in the neighborhood
 	 *  
-	 * @param counts of all customers
+	 * @param nCensus which is the count of all customers
 	 */
 	public void census(int nCensus[]) {
 		// zero the counts of all customers
-		nCensus[RESELLER] = 0; 
-		nCensus[EMPTY] = 0; 
-		nCensus[CASUAL] = 0; 
-		nCensus[OUTAGE] = 0; 
-		nCensus[STREAMER] = 0; 
+		nCensus[RESELLER] = 0;
+		nCensus[EMPTY] = 0;
+		nCensus[CASUAL] = 0;
+		nCensus[OUTAGE] = 0;
+		nCensus[STREAMER] = 0;
 
 		//TODO: Write your code here.
 		//Gets bounds of a 3x3 neighborhood
 		int upper = Math.max(0, row - 1);
-		int lower = Math.min(plain.getLength() - 1, row + 1);
+		int lower = Math.min(plain.grid.length - 1, row + 1);
 		int left = Math.max(0, col - 1);
-		int right = Math.min(plain.getWidth() - 1, col + 1);
+		int right = Math.min(plain.grid.length - 1, col + 1);
 
 		//Checks each cell and increments the State nCensus by 1
-		for (int i = upper; i <= lower; i++){
-			for (int j = left; j <= right; j++){
-				if(plain.grid[i][j].who() == State.RESELLER){
+		for (int i = lower; i >= upper; i--){
+			for (int j = right; j >= left; j--){
+				if(plain.grid[i][j].who().equals(State.RESELLER)){
 					nCensus[RESELLER]++;
 				}
-				else if (plain.grid[i][j].who() == State.EMPTY){
+				else if (plain.grid[i][j].who().equals(State.EMPTY)){
 					nCensus[EMPTY]++;
 				}
-				else if (plain.grid[i][j].who() == State.CASUAL){
+				else if (plain.grid[i][j].who().equals(State.CASUAL)){
 					nCensus[CASUAL]++;
 				}
-				else if (plain.grid[i][j].who() == State.OUTAGE){
+				else if (plain.grid[i][j].who().equals(State.OUTAGE)){
 					nCensus[OUTAGE]++;
 				}
-				else if (plain.grid[i][j].who() == State.STREAMER){
+				else if (plain.grid[i][j].who().equals(State.STREAMER)){
 					nCensus[STREAMER]++;
 				}
 			}
