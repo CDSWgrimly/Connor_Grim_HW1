@@ -117,10 +117,10 @@ public class ISPBusiness {
 			//System.out.println("Profit: " + profit);
 			t = updatePlain(t);
 		}
-		//Displays Final Profit and calculated Profit %
+		//Displays Calculated Profit %
 		//System.out.println("Final Profit: " + profit);
 		profitPercentage = ((profit * 100) / (double) ((t.getLength() * t.getWidth()) * 12));
-		System.out.print("Profit %: ");
+		//System.out.print("Profit %: ");
 		System.out.printf("%.2f", profitPercentage);
 	}
 }
