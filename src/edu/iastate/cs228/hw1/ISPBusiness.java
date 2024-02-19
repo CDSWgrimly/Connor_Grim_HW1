@@ -74,10 +74,11 @@ public class ISPBusiness {
 		option = scnr.nextInt();
 		switch(option){
 			case 1:
+				Scanner scnr2 = new Scanner(System.in);
 				//Option 1: Scan for input file and create Town t from file
 				String fileName;
 				System.out.println("Enter file name: ");
-				fileName = scnr.nextLine();
+				fileName = scnr2.nextLine();
 				try {
 					t = new Town(fileName);
 				}
