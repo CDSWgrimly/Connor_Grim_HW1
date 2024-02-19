@@ -18,7 +18,11 @@ public class Empty extends TownCell{
         census(tCensus);
         tCensus[EMPTY]--;
 
-        //EMPTY RULE
-        return new Casual(tNext, row, col);
+        if (tCensus[EMPTY] + tCensus[OUTAGE] <= 1){
+            return new Reseller(tNext, row, col);
+        }
+        else{
+            return new Casual(tNext, row, col);
+        }
     }
 }

@@ -110,17 +110,17 @@ public class ISPBusiness {
 		//Iterates 12 times; calculates profit and updates for next iteration
 		int profit = 0;
 		for (int i = 1; i <= 12; i++) {
-			System.out.println("Iteration: " + i);
-			System.out.println(t);
+			//System.out.println("Iteration: " + i);
+			//System.out.println(t);
 
-			profit = getProfit(t);
-			System.out.println("Profit: " + profit);
+			profit += getProfit(t);
+			//System.out.println("Profit: " + profit);
 			t = updatePlain(t);
 		}
 		//Displays Final Profit and calculated Profit %
-		System.out.println("Final Profit: " + profit);
-		profitPercentage = ((profit * 100) / (double) (t.getLength() * t.getWidth()));
-		System.out.println("Profit %: ");
+		//System.out.println("Final Profit: " + profit);
+		profitPercentage = ((profit * 100) / (double) ((t.getLength() * t.getWidth()) * 12));
+		System.out.print("Profit %: ");
 		System.out.printf("%.2f", profitPercentage);
 	}
 }

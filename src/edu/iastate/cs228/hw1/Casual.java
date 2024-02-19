@@ -27,7 +27,7 @@ public class Casual extends TownCell{
         }
         //CASUAL RULE 1
         else if (tCensus[RESELLER] > 0){
-            return new Reseller(tNext, row, col);
+            return new Outage(tNext, row, col);
         }
         //CASUAL RULE 2
         else if (tCensus[STREAMER] > 0){
