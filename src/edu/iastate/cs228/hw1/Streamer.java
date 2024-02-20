@@ -24,7 +24,7 @@ public class Streamer extends TownCell{
         else if (tCensus[RESELLER] > 0){
             return new Outage(tNext, row, col);
         }
-        //STREAMER RULE 1
+        //STREAMER RULE 2
         else if (tCensus[OUTAGE] > 0){
             return new Empty(tNext, row, col);
         }
