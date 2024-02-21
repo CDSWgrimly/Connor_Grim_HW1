@@ -8,6 +8,9 @@ import edu.iastate.cs228.hw1.Town;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+/**
+ * @author Connor Grim
+ */
 public class EmptyTest {
     @Test
     void testA(){

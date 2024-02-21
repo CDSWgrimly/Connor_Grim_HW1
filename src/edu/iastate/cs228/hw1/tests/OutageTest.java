@@ -6,6 +6,9 @@ import edu.iastate.cs228.hw1.Town;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+/**
+ * @author Connor Grim
+ */
 public class OutageTest {
     @Test
     void testA(){

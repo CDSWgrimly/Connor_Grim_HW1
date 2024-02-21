@@ -1,5 +1,9 @@
 package edu.iastate.cs228.hw1;
 
+/**
+ * @author Connor Grim
+ */
+
 public class Streamer extends TownCell{
     public Streamer (Town t, int r, int c){
         super(t, r, c);

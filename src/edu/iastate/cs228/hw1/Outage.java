@@ -1,5 +1,8 @@
 package edu.iastate.cs228.hw1;
 
+/**
+ * @author Connor Grim
+ */
 public class Outage extends TownCell{
     public Outage (Town t, int r, int c){
         super(t, r, c);

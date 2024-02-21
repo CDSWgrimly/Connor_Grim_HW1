@@ -11,6 +11,9 @@ import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
 
+/**
+ * @author Connor Grim
+ */
 public class ISPBusinessTest {
     Town t;
     @BeforeEach

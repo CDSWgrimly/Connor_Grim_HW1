@@ -5,6 +5,10 @@ import static org.junit.jupiter.api.Assertions.*;
 import edu.iastate.cs228.hw1.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+/**
+ * @author Connor Grim
+ */
 public class CasualTest {
 
     @Test

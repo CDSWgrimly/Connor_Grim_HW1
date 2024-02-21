@@ -47,7 +47,6 @@ public abstract class TownCell {
 		nCensus[OUTAGE] = 0;
 		nCensus[STREAMER] = 0;
 
-		//TODO: Write your code here.
 		//Gets bounds of a 3x3 neighborhood
 		int upper = Math.max(0, row - 1);
 		int lower = Math.min(plain.grid.length - 1, row + 1);

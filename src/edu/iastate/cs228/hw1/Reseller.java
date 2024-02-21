@@ -1,5 +1,9 @@
 package edu.iastate.cs228.hw1;
 
+/**
+ * @author Connor Grim
+ */
+
 public class Reseller extends TownCell{
     public Reseller (Town t, int r, int c){
         super(t, r, c);

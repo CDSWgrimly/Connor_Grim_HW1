@@ -4,6 +4,9 @@ import edu.iastate.cs228.hw1.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
+/**
+ * @author Connor Grim
+ */
 public class TownTest {
     Town t;
     @BeforeEach

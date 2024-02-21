@@ -1,4 +1,8 @@
 package edu.iastate.cs228.hw1;
+
+/**
+ * @author Connor Grim
+ */
 public class Empty extends TownCell{
     //Super Constructor
     public Empty (Town t, int r, int c){
