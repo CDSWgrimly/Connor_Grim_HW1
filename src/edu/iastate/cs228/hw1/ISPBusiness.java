@@ -81,6 +81,7 @@ public class ISPBusiness {
 				fileName = scnr2.nextLine();
 				try {
 					t = new Town(fileName);
+					scnr2.close();
 				}
 				catch (FileNotFoundException e){
 					System.out.println("Input file not found.");
@@ -90,14 +91,12 @@ public class ISPBusiness {
 				break;
 			case 2:
 				//Option 2: Manually enter length, width and generation seed and randomly assign values to grid
-				int len = 0;
-				int wid = 0;
-				int seed = 0;
-				System.out.println("Enter grid length: ");
+				int len;
+				int wid;
+				int seed;
+				System.out.println("Enter grid rows, columns, and seed, all separated by spaces:");
 				len = scnr.nextInt();
-				System.out.println("Enter grid width: ");
 				wid = scnr.nextInt();
-				System.out.println("Enter seed: ");
 				seed = scnr.nextInt();
 				t = new Town(len, wid);
 				t.randomInit(seed);
@@ -120,7 +119,7 @@ public class ISPBusiness {
 		//Displays Calculated Profit %
 		//System.out.println("Final Profit: " + profit);
 		profitPercentage = ((profit * 100) / (double) ((t.getLength() * t.getWidth()) * 12));
-		//System.out.print("Profit %: ");
+		System.out.print("Profit %: ");
 		System.out.printf("%.2f", profitPercentage);
 	}
 }
